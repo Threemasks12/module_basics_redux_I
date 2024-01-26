@@ -1,25 +1,5 @@
-
-As stated you can use the functions Move, Turn, Peek and AtGoal + variables, conditionals, arrays, loops and functions to get the car to the end.
-
-**Submit**:   
-Add task3.* to the repo.  
-Commit to github. 
-
-![alt](images/map3.png) 
-
-
 while (!AtGoal())
 {
-    MoveOrTurn();
-}
-
-void MoveOrTurn();
-{
-    if(AtGoal())
-    {
-        return;
-    }
-    
     if (Peek())
     {
         Move();
