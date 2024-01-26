@@ -1,14 +1,12 @@
-
-
-## Task 1
+## Task 2
 
 As stated you can use the functions Move, Turn, Peek and AtGoal + variables, conditionals, arrays, loops and functions to get the car to the end.
 
 **Submit**:   
-Add task1.*file to the repo.  
+Add task2.* to the repo.  
 Commit to github. 
 
-![alt] (images / map1.png)
+![alt](images/map2.png)  
 
 while(!AtGoal())
 {
@@ -30,7 +28,9 @@ Void MoveOrTurn()
         Turn();
     }
 }
-
+#region Basic functions
+// These functions are just her to make your intelisense work. 
+// They only have a conceptual function.
 
 void Move()
 {
@@ -53,3 +53,4 @@ bool AtGoal()
     // Returns true if the current cell is the goal cell.
     return true; // just a placholder
 }
+
