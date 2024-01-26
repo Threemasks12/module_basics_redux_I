@@ -18,9 +18,9 @@ bool teleported = false;
 
 while (!AtGoal())
 {
-    int availableRoads = SeeAlldirectins();
+    int possibleRoads = SeeAlldirectins();
 
-    if (availableRoads > 1)
+    if (possibleroads > 1)
     {
         crossroads.Add(CurrentPosition());
 
@@ -28,7 +28,7 @@ while (!AtGoal())
 
         teleported = false;
     }
-    else if (availableRoads == 1)
+    else if (possibleroads == 1)
     {
         MoveAvailableDirection();
 
@@ -88,7 +88,7 @@ bool AtGoal()
 int SeeAlldirectins()
 {
     int turnCount = 0;
-    int availableRoads = 0;
+    int possibleroads = 0;
 
     while (turnCount < 4)
     {
@@ -96,13 +96,13 @@ int SeeAlldirectins()
         {
             // Add the current cell to the list of crossroads.
             crossroads.Add(CurrentPosition());
-            availableRoads++;
+            possibleroads++;
         }
         Turn();
         turnCount++;
     }
 
-    return availableRoads;
+    return possibleroads;
 }
 
 void Mark()
