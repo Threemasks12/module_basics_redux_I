@@ -43,26 +43,12 @@ void MoveOrTurn();
     else if (!Peek())
     {
         turnAround();
-        Move();
-    }
-    
-    
-    
-    Peek();
-    if (Peek())
-    {
-        Move();      
-    }
-    else
-    {
-        Turn();
         Peek();
-        if(!Peek())
+        if(Peek())
         {
-            center();
-            trunLeft();  
+            Move();
         }
-          
+        
     }
     
 }
