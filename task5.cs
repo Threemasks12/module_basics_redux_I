@@ -80,7 +80,3 @@ bool AtGoal()
     return true; // just a placholder
 }
 
-void Mark()
-{
-    // Paints the current cell. Making it a wall.
-}

@@ -17,7 +17,7 @@ Void MoveOrTurn()
 {
     if(AtGoal())
     {
-        return;
+        return true;
     }
     if(Peek())
     {
@@ -52,5 +52,14 @@ bool AtGoal()
 {
     // Returns true if the current cell is the goal cell.
     return true; // just a placholder
+}
+
+#endregion
+
+#new functions
+
+void MoveOrTurn()
+{
+     // placeholder for game to loop. 
 }
 

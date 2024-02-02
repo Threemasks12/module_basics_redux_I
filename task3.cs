@@ -20,15 +20,23 @@ void MoveOrTurn();
         return;
     }
     
+    Peek();
     if (Peek())
     {
-        Move();
-        Mark();
+        Move();      
     }
     else
     {
         Turn();
+        Peek();
+        if(!Peek())
+        {
+            center();
+            trunLeft();  
+        }
+          
     }
+    
 }
 
 
@@ -63,7 +71,16 @@ bool AtGoal()
 
 #region Created functions
 
-void Mark()
+void center()
 {
-    // places a marker telling the car it has been there. 
+    Turn();
+    Turn();
+    Turn();
+}
+
+void trunLeft()
+{
+    Turn();
+    Turn();
+    Turn();
 }
