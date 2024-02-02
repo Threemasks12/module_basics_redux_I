@@ -38,15 +38,37 @@ void MoveOrTurn();
             {
                 Move();
             }
+            else
+            {
+                Turn();
+            }
         }
     }
     else if (!Peek())
     {
-        turnAround();
+        Turn();
         Peek();
         if(Peek())
         {
             Move();
+        }
+        if(!Peek())
+        {
+            Turn();
+            Peek();
+            if(Peek())
+            {
+                Move();
+            }
+            else if(!Peek())
+            {
+                Turn();
+                Peek();
+                if(Peek())
+                {
+                    Move();
+                }
+            }
         }
         
     }
