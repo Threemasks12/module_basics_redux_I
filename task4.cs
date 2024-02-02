@@ -19,6 +19,35 @@ void MoveOrTurn();
         return;
     }
     
+    
+
+    Peek()
+    if(Peek())
+    {
+        Turn()
+        Peek()
+        if(Peek())
+        {
+            Move()
+        }
+        else if(!Peek())
+        {
+            trunLeft();
+            Peek();
+            if(Peek())
+            {
+                Move();
+            }
+        }
+    }
+    else if (!Peek())
+    {
+        turnAround();
+        Move();
+    }
+    
+    
+    
     Peek();
     if (Peek())
     {
@@ -80,6 +109,12 @@ void center()
 void trunLeft()
 {
     Turn();
+    Turn();
+    Turn();
+}
+
+void turnAround()
+{
     Turn();
     Turn();
 }
